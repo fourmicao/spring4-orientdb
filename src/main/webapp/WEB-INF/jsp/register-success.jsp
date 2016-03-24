@@ -50,11 +50,10 @@
     <div>
         <h1 id="text"></h1>
     </div>
-    <%--<script src="bower_components/d3/d3.js"></script>--%>
-    <%--<script src="bower_components/c3js-chart/c3.js"></script>--%>
-    <script type="text/javascript" src="/resources/d3.js"></script>
-    <script type="text/javascript" src="/resources/c3.js"></script>
-    <script type="text/javascript" src="/resources/poll.js"></script>
+    <script type="text/javascript" src="/resources/d3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/resources/c3.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="/resources/poll.js" charset="utf-8"></script>
 </div>
 </body>
 </html>
