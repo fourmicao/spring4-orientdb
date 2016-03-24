@@ -16,16 +16,13 @@ import java.util.List;
  * http://www.javabeat.net/spring-bean-scopes-request-session-global-session-example/
  * http://tuhrig.de/making-a-spring-bean-session-scoped/
  */
-@Component
+//@Component
 @Getter
 @Setter
 @ToString
 //@Scope(value="globalSession", proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class Address {
-    private List<String> stringList = new ArrayList<>();
-    private String city = "Dublin";
-
-    public void addToList(String string) {
-        stringList.add(string);
-    }
+    private String street;
+    private String city;
+    private String country;
 }

@@ -1,7 +1,6 @@
 package com.hrb.controller;
 
 import com.hrb.config.OrientDBFactory;
-import com.hrb.model.Address;
 import com.hrb.model.Count;
 import com.hrb.util.FreeTimer;
 import com.tinkerpop.blueprints.impls.orient.OrientGraphNoTx;
@@ -20,9 +19,6 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class DefaultRouteController {
     @Autowired
-    private Address address;
-
-    @Autowired
     protected OrientDBFactory factory;
 
     @Autowired
@@ -31,7 +27,6 @@ public class DefaultRouteController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String showUseragentJsp(Model model) {
         log.info("..\n HOME PAGE GET..\n");
-        address.addToList(" From /");
         //return "index";
         return "register-success";
     }

@@ -17,18 +17,12 @@ public class User {
     private String username;
     private String password;
     private String email;
+    private String phone;
     private Date birthDate;
-    private String profession;
-    private int signInCodeStatus;
-    private boolean emailConfigured;
+    private Gender gender;
+    private MaritalStatus maritalStatus;
 
     public boolean isEmailConfigured() {
         return StringUtils.isNotBlank(email);
     }
-
-    private String gender = "M";
-
-    private String maritalStatus = "";
-
-    private String favoriteMovieType = "";
 }
