@@ -16,6 +16,14 @@
         });
 
     </script>
+
+    <link href="<core:url value="/resources/c3.css" />" rel="stylesheet">
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+
 </head>
 <body>
 <div class="container">
@@ -33,7 +41,20 @@
             <label><input type="checkbox"> Remember me</label>
         </div>
     </form>
+</div>
 
+<div class="container">
+    <div id="chart">
+    </div>
+
+    <div>
+        <h1 id="text"></h1>
+    </div>
+    <%--<script src="bower_components/d3/d3.js"></script>--%>
+    <%--<script src="bower_components/c3js-chart/c3.js"></script>--%>
+    <script type="text/javascript" src="/resources/d3.js"></script>
+    <script type="text/javascript" src="/resources/c3.js"></script>
+    <script type="text/javascript" src="/resources/poll.js"></script>
 </div>
 </body>
 </html>
