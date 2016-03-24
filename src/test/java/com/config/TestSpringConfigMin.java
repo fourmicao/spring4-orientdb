@@ -1,14 +1,19 @@
 package com.config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.annotation.PropertySources;
+import com.hrb.config.SpringConfig;
+import org.springframework.context.annotation.*;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
+//@Import(AConfig.class)
 @PropertySources({@PropertySource("classpath:app-test.properties")})
 @Configuration
-//@ComponentScan({"com.hrb.services", "com.hrb.util", "com.hrb.config"})
+//@ComponentScan({"com.hrb.config"})
+@ComponentScan(
+        excludeFilters = @ComponentScan.Filter(type=FilterType.ASSIGNABLE_TYPE, value={SpringConfig.class}),
+        basePackages = {
+                "com.hrb.config"
+        }
+)
 public class TestSpringConfigMin {
 
     @Bean
