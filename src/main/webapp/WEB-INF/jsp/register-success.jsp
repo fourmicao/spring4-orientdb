@@ -22,11 +22,16 @@
 
     <div style="margin-top:20px"></div>
 
-    <form id="myform">
-        <label for="field">Required, us phone number: </label>
-        <input class="left" id="field" name="field">
-        <br/>
-        <input type="submit" value="Validate!">
+    <form id="myform" role="form" class="form-inline form-horizontal">
+        <div class="form-group">
+            <label for="field">Required, us phone number: </label>
+            <input class="left" id="field" name="field" class="form-control">
+            <br/>
+            <input type="submit" value="Validate!" class="btn btn-default">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+        </div>
     </form>
 
 </div>
