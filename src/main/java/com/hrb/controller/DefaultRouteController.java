@@ -1,9 +1,14 @@
 package com.hrb.controller;
 
+import com.hrb.config.OrientDBFactory;
 import com.hrb.model.Address;
+import com.hrb.model.Count;
+import com.hrb.util.FreeTimer;
+import com.tinkerpop.blueprints.impls.orient.OrientGraphNoTx;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -17,13 +22,17 @@ public class DefaultRouteController {
     @Autowired
     private Address address;
 
-    @Value("${a.url}")
-    private String aUrl;
+    @Autowired
+    protected OrientDBFactory factory;
+
+    @Autowired
+    private FreeTimer freeTimer;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String showUseragentJsp(Model model) {
         log.info("..\n HOME PAGE GET..\n");
         address.addToList(" From /");
+        //return "index";
         return "register-success";
     }
 
@@ -32,5 +41,19 @@ public class DefaultRouteController {
     public ModelAndView handleRequestNullException(Exception e) {
         log.error("Exception : " + e.getMessage());
         return new ModelAndView("ErrorPage");
+    }
+
+    /**
+     * This is referenced from https://github.com/maggiolo00/orientdb-ha
+     * @return
+     */
+    @RequestMapping(value = "counts", method = RequestMethod.GET)
+    public ResponseEntity<Count> getCount() {
+        OrientGraphNoTx graphtNoTx = factory.getGraphtNoTx();
+        long countVertices = graphtNoTx.countVertices("V");
+        log.info("******Vertex Count is {} at {} *******", countVertices, freeTimer.formattedCurrentTime());
+        Count count = new Count();
+        count.setCount(countVertices);
+        return new ResponseEntity(count, HttpStatus.OK);
     }
 }
