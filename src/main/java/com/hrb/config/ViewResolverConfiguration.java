@@ -8,7 +8,7 @@ import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
 /**
- * Created by x148128 on 24/03/2016.
+ * Created on 24/03/2016.
  */
 @Configuration
 public class ViewResolverConfiguration {
