@@ -6,7 +6,7 @@ import org.joda.time.format.DateTimeFormatter;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by x148128 on 24/03/2016.
+ * Created on 24/03/2016.
  */
 @Component
 public class FreeTimer {
