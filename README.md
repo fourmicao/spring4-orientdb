@@ -25,6 +25,7 @@ https://github.com/maggiolo00?tab=repositories
 
 https://github.com/gjrwebber/spring-data-gremlin
 
-check maven for a specific top level
-mvn dependency:tree -Dverbose -Dincludes=commons-collections
-mvn dependency:tree -Dverbose -Dincludes=com.orientechnologies
+<p> check maven for a specific top level </p>
++ mvn dependency:tree -Dverbose -Dincludes=commons-collections
++ mvn dependency:tree -Dverbose -Dincludes=com.orientechnologies
++ 
