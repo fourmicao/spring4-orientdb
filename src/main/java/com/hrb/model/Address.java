@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by x148128 on 02/03/2016.
+ * Created  on 02/03/2016.
  * http://www.concretepage.com/spring/spring-bean-scope-example-using-scope-annotation-and-xml-for-singleton-prototype-request-session-global-session-and-application-scope-with-scoped-proxy
  * http://www.javabeat.net/spring-bean-scopes-request-session-global-session-example/
  * http://tuhrig.de/making-a-spring-bean-session-scoped/
