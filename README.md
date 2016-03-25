@@ -16,12 +16,12 @@ If intellij source folder is corrupted, then use the following.
 Set Jetty for Intellij
 https://federicoponte.wordpress.com/2014/03/06/setting-up-jetty-with-intellij-idea/
 
-10000 ft for OrientDb
-http://rrevo.github.io/2015/04/05/getting-started/
-http://pettergraff.blogspot.ie/2014/01/getting-started-with-orientdb.html
-https://floatcode.wordpress.com/2015/07/08/graph-database-using-java-orientdb-and-gremlin/
-Spring data gremlin makes it easier to implement Graph based repositories.
-https://github.com/maggiolo00?tab=repositories
+10000 ft for OrientDb : 
++ http://rrevo.github.io/2015/04/05/getting-started/
++ http://pettergraff.blogspot.ie/2014/01/getting-started-with-orientdb.html
++ https://floatcode.wordpress.com/2015/07/08/graph-database-using-java-orientdb-and-gremlin/
++ Spring data gremlin makes it easier to implement Graph based repositories.
++ https://github.com/maggiolo00?tab=repositories
 
 https://github.com/gjrwebber/spring-data-gremlin
 
