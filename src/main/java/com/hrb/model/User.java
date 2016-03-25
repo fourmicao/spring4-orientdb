@@ -8,7 +8,7 @@ import org.apache.commons.lang.StringUtils;
 import java.util.Date;
 
 /**
- * Created by x148128 on 08/02/2016.
+ * Created on 08/02/2016.
  */
 @Getter
 @Setter
